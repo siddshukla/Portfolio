@@ -66,16 +66,20 @@ const About = () => {
                 backgroundImageOpacity={0.5}
                 showAtmosphere
                 showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+                enablePointerInteraction
+                autoRotate={true}  // Ensure autoRotate is true
+                autoRotateSpeed={0.7} // Speed of rotation
                 labelsData={[
-                  { lat: 40, lng: -100, text: 'Rjieka, Croatia', color: 'white', size: 15 },
+                  { lat: 40, lng: -100, text: 'Rijeka, Croatia', color: 'white', size: 15 },
                 ]}
               />
             </div>
             <div>
               <p className="grid-headtext">
-                I’m highly adaptable to different time zones and collaboration styles
+                "I’m flexible with working hours and adept at collaborating with diverse teams across various time zones."
               </p>
               <p className="grid-subtext">
                 I'm based in Bhubaneswar, India, and open to remote software development opportunities worldwide.

@@ -23,9 +23,24 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 navbar">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-3 mx-auto c-space"> {/* Reduced padding */}
-          <a href="/home" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-            <img src="/assets/logo3.svg" alt="logo" style={{ width: '80px', height: '4rem', marginBottom: '0px' }} /> {/* Adjust logo size */}
-          </a>
+          
+        <a href="/home" className="flex items-center text-neutral-400 font-bold text-xl hover:text-white transition-colors">
+  {/* Logo Image */}
+  <img
+    src="/assets/logo3.svg"
+    alt="logo"
+    style={{ width: '80px', height: '4rem', marginBottom: '0px' }} className='absolute left-3' // Adjust logo size
+  />
+  
+  {/* Textual Logo */}
+  <img
+    src="/assets/Logo3.png"
+    alt="SIDD"
+    style={{ width: '13rem', height: '4rem', marginBottom: '0px' }}// Adjust text logo size
+    className="absolute left-12"
+  />
+</a>
+
 
           <button
             onClick={toggleMenu}
