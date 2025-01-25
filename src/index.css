@@ -153,9 +153,9 @@ body {
 
 .waving-hand {
   animation-name: wave-animation;
-  animation-duration: 2.5s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
+  transform-origin: 76% 76%;
   display: inline-block;
 }
 

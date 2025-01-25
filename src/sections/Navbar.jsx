@@ -29,17 +29,18 @@ const Navbar = () => {
   <img
     src="/assets/logo3.svg"
     alt="logo"
-    style={{ width: '80px', height: '4rem', marginBottom: '0px' }} className='absolute left-3' // Adjust logo size
+    style={{ width: '80px', height: '4rem', marginBottom: '0px' }} // Adjust logo size
   />
   
   {/* Textual Logo */}
   <img
     src="/assets/Logo3.png"
     alt="SIDD"
-    style={{ width: '13rem', height: '4rem', marginBottom: '0px' }}// Adjust text logo size
-    className="absolute left-12"
+    style={{ width: '13rem', height: '4rem', marginBottom: '0px' }} // Adjust text logo size
+    className="ml-4" // Increased margin-left for more gap
   />
 </a>
+
 
 
           <button
