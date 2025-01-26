@@ -34,10 +34,10 @@ const Navbar = () => {
   
   {/* Textual Logo */}
   <img
-    src="/assets/Logo3.png"
+    src="/assets/newLogo.png"
     alt="SIDD"
-    style={{ width: '13rem', height: '4rem', marginBottom: '0px' }} // Adjust text logo size
-    className="ml-4" // Increased margin-left for more gap
+    style={{ width: '9rem', height: '3rem', marginBottom: '0px' }} // Adjust text logo size
+    className="ml-1" // Increased margin-left for more gap
   />
 </a>
 
