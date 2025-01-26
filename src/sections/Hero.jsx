@@ -52,7 +52,7 @@ const Hero = () => {
           style={{ fontFamily: "'Poppins', sans-serif" }}
           aria-label="Introduction"
         >
-          Hello, I am Siddharth <span className="waving-hand" aria-hidden="true">👋🏻</span>
+          Hi, I am Siddharth <span className="waving-hand" aria-hidden="true">👋🏻</span>
         </p>
 
         {/* Responsive Tagline */}
