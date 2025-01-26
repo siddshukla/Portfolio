@@ -31,7 +31,7 @@ const Hero = () => {
       y: 0,
       transition: {
         delay: index * 0.1, // Delay for staggered animation
-        duration: 0.3,
+        duration: 1.9,
         ease: 'easeOut',
       },
     }),
@@ -62,17 +62,21 @@ const Hero = () => {
           }`}
           aria-label="Hero Tagline"
         >
-          {tagline.split('').map((char, index) => (
-            <motion.span
-              key={index}
-              variants={letterAnimation}
-              initial="hidden"
-              animate="visible"
-              custom={index}
-              className="inline-block"
-            >
-              {char === ' ' ? '\u00A0' : char} {/* Handle spaces */}
-            </motion.span>
+          {tagline.split(' ').map((word, wordIndex) => (
+            <span key={wordIndex} className="inline-block mx-1">
+              {word.split('').map((char, charIndex) => (
+                <motion.span
+                  key={charIndex}
+                  variants={letterAnimation}
+                  initial="hidden"
+                  animate="visible"
+                  custom={wordIndex * 10 + charIndex} // Ensure unique delays per character
+                  className="inline-block"
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              ))}
+            </span>
           ))}
         </motion.div>
       </div>
