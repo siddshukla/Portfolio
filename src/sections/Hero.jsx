@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
 import { PerspectiveCamera } from '@react-three/drei';
+import { motion } from 'framer-motion';
 
 import Rings from '../components/Rings.jsx';
 import ReactLogo from '../components/ReactLogo.jsx';
@@ -22,6 +23,22 @@ const Hero = () => {
   // Calculate dynamic sizes based on screen size
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
+  // Animation variants for the tagline
+  const letterAnimation = {
+    hidden: { opacity: 0, y: 10 },
+    visible: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: index * 0.1, // Delay for staggered animation
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    }),
+  };
+
+  const tagline = 'Software Developer & Open Source Contributor';
+
   return (
     <section
       className="min-h-screen w-full flex flex-col relative"
@@ -30,19 +47,34 @@ const Hero = () => {
     >
       {/* Greeting Section */}
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-      <p
+        <p
           className="sm:text-3xl text-xl font-bold text-white text-center"
           style={{ fontFamily: "'Poppins', sans-serif" }}
           aria-label="Introduction"
         >
           Hi, I am Siddharth <span className="waving-hand" aria-hidden="true">👋🏻</span>
         </p>
-        <p
-          className="hero_tag text-gray_gradient text-center"
+
+        {/* Responsive Tagline */}
+        <motion.div
+          className={`hero_tag text-gray_gradient ${
+            isSmall ? 'text-center text-sm break-words leading-tight' : 'text-lg text-center'
+          }`}
           aria-label="Hero Tagline"
         >
-          Software Developer & Open Source Contributor
-        </p>
+          {tagline.split('').map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterAnimation}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+              className="inline-block"
+            >
+              {char === ' ' ? '\u00A0' : char} {/* Handle spaces */}
+            </motion.span>
+          ))}
+        </motion.div>
       </div>
 
       {/* 3D Canvas Section */}
