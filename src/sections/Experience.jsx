@@ -19,10 +19,10 @@ const Skills = () => {
           <div className="work-canvas">
             <Canvas>
               {/* Scene Lighting */}
-              <ambientLight intensity={0.3} />
+              <ambientLight intensity={1.9} />
               <spotLight position={[10, 10, 10]} angle={0.3} penumbra={1} intensity={1} />
               <directionalLight position={[5, 5, 5]} intensity={0.5} />
-              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2.7} />
 
               {/* 3D Model with Fallback Loader */}
               <Suspense fallback={<CanvasLoader />}>
