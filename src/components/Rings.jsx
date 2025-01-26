@@ -11,7 +11,7 @@ const Rings = ({ position }) => {
     }
   }, []);
 
-  const texture = useTexture('textures/rings.png');
+  const texture = useTexture('textures/ring3.jpeg');
 
   useGSAP(
     () => {
@@ -45,10 +45,10 @@ const Rings = ({ position }) => {
 
   return (
     <Center>
-      <group scale={0.5}>
+      <group scale={0.6}>
         {Array.from({ length: 4 }, (_, index) => (
           <mesh key={index} ref={getRef}>
-            <torusGeometry args={[(index + 1) * 0.5, 0.1]}></torusGeometry>
+            <torusGeometry args={[(index + 1) * 0.3, 0.1]}></torusGeometry>
             <meshMatcapMaterial matcap={texture} toneMapped={false} />
           </mesh>
         ))}
