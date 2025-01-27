@@ -12,7 +12,6 @@ import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
-import { HackerRoom } from '../components/HackerRoom.jsx';
 import { Computer } from '../components/Computer.jsx';
 
 const Hero = () => {
