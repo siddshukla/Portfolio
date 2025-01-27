@@ -13,6 +13,7 @@ import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
+import { Computer } from '../components/Computer.jsx';
 
 const Hero = () => {
   // Media queries for responsive design
@@ -90,12 +91,13 @@ const Hero = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
-              <HackerRoom
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0.1, -Math.PI, 0]}
-              />
+            <Computer
+              scale={sizes.deskScale}
+              position={sizes.deskPosition}
+              rotation={[0.1, -Math.PI, 0]}
+            />
             </HeroCamera>
+            
 
             <group>
               <Target position={sizes.targetPosition} />
