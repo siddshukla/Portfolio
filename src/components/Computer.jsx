@@ -5,7 +5,8 @@ export function Computer(props) {
   const { nodes, materials } = useGLTF('/computer.glb');
   return (
     <group {...props} dispose={null}>
-      <group scale={0.23} rotation={[0, Math.PI, 0]}> {/* Rotate the model 180 degrees */}
+      {/* Add position here to move the entire model */}
+      <group scale={0.23} rotation={[0, Math.PI, 0]} position={[0, 30, 0]}>
         <group position={[0, 28.869, 312.193]} rotation={[-1.469, 0, 0]} scale={100}>
           <mesh
             geometry={nodes.Plane002_digital_displays_0.geometry}
