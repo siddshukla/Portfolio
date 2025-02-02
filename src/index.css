@@ -4,12 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Color Variables */
+:root {
+  --color-primary: #000000;       /* Pure black for primary background */
+  --color-secondary: #636e97;     /* Near-black purple for secondary elements */
+  --color-tertiary: #2f5160;      /* Near-black teal for accents */
+  --color-neutral-400: #6A5E68;   /* Very dark muted purple for neutral text */
+  --color-neutral-500: #6A5E68;   /* Very dark muted purple for neutral text */
+  --color-neutral-600: #6A5E68;   /* Very dark muted purple for neutral text */
+  --color-black-200: #000000;     /* Pure black for dark backgrounds */
+  --color-black-300: #1A142D;     /* Near-black purple for darker elements */
+  --color-black-500: #1A142D;     /* Near-black purple for darker elements */
+  --color-black-600: #1A142D;     /* Near-black purple for darker elements */
+  --color-white: #8FBFC2;         /* Darker light cyan for text and light backgrounds */
+  --color-white-500: #8FBFC2;     /* Darker light cyan for text and light backgrounds */
+  --color-white-600: #8FBFC2;     /* Darker light cyan for text and light backgrounds */
+  --color-white-800: #8FBFC2;     /* Darker light cyan for text and light backgrounds */
+  --color-green-400: #2F5F60;     /* Near-black teal for success/positive elements */
+  --color-green-500: #2F5F60;     /* Near-black teal for success/positive elements */
+}
+
 * {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #010103;
+  background: var(--color-primary);
   font-family: 'General Sans', sans-serif;
 }
 
@@ -39,7 +59,7 @@ body {
   }
 
   .text-gray_gradient {
-    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[var(--color-secondary)] from-60% via-[var(--color-tertiary)] via-60% to-[var(--color-tertiary)] to-100% bg-clip-text text-transparent;
   }
 
   /* button component */
@@ -70,7 +90,7 @@ body {
   }
 
   .grid-subtext {
-    @apply text-[#afb0b6] text-base font-generalsans;
+    @apply text-[var(--color-neutral-400)] text-base font-generalsans;
   }
 
   .copy-container {
@@ -253,4 +273,3 @@ body {
   background: linear-gradient(to right, rgba(5, 12, 18, 0.9),rgba(2, 12, 29, 0.7)); /* Blue gradient with transparency */
   box-shadow: 0 4px 20px rgba(1, 2, 27, 0.3); /* Add shadow effect */
 }
-
